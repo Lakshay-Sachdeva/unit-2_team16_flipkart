@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <!-- <link href = "style.css" rel="stylesheet" > -->
+</head>
+<body>
+    <h1>
+        Cart
+    </h1>
+    <div id = "products"></div>
+    <div id ="pro_app">
+    </div>
+    <script>
+        let discount = {
+            masai30: 30 ,
+            masai20: 20 ,
+            masai10: 10,
+            masai_bonus: 50,
+            masai_grad: 90
+        }
+        
+        let parent = document.getElementById("products") ;      //parent tag to append all items
+        let promotion = document.getElementById("pro_app") ;    //parent tag for promo code
+        let f_price = 0;                                        //total price of the cart
+
+        let disp_products = localStorage.getItem("cart") ;      //getting cart from local storage
+        let products_disp = JSON.parse(disp_products) ;
+
+        if(products_disp === null){                             //message is cart is empty
+            let message = "Cart is Empty"
+            parent.append(message) ;
+        }
+        else{                                                   //creating items of cart to be displayed
+        products_disp.forEach(function (item){
+            let div = document.createElement('div') ;
+            div.setAttribute('class' , 'cart_list')
+
+            let i_name = document.createElement('p') ;
+            i_name.textContent = item.name ;
+            let i_price = document.createElement('p') ;
+            i_price = item.price ;
+            let i_image = document.createElement('img') ;
+            i_image.src = item.image ;
+            
+            f_price += Number(item.price) ;                     //updating total price
+            div.append(i_image , i_name , i_price ) ;           //creating div for 1 item
+
+            let prom = document.createElement('div') ;          //creating promo div
+            prom.setAttribute('class' , 'promo') ;
+            let title = document.createElement('p') ;
+            title.textContent = "Apply Promo" 
+            let inp = createElement('input') ;
+            inp.setAttribute = ('type' , 'text') ;              //taking input for promo code
+            inp.setAttribute = ('id' , 'promo_code') ;
+            inp.setAttribute = ('placeholder' , 'Enter Code') ;
+            let btn_1 = document.createElement('button') ;      //apply button
+            btn_1.setAttribute = ('id' , 'apply_promo') ;
+            btn_1.textContent = "Apply" ;
+            btn_1.addEventListener('click' , apply) ;
+
+            prom.append(title , inp , btn_1) ;
+
+            function apply() {                                  //apply promo function
+                let code = document.getElementById('promo_code').value ;
+                if(code == discount["keys"]){
+                    let num = discount[keys] ;
+                    f_price = (f_price * num) / 100 ;
+                }
+                else{
+                    alert("Please enter valid Promo Code") ;    
+                }
+            }
+
+            let right = document.createElement('button') ;         //place order button
+            right.textContent = "PLACE ORDER" ;
+            right.setAttribute = ('id' , 'order') ;
+            right.setAttribute = ('href' , 'products.html') ;
+
+            parent.append(div , right) ;
+            promotion.append(prom) ;
+
+        })
+    }
+    </script>
+    
+</body>
+</html>
