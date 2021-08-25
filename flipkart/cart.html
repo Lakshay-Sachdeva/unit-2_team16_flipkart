@@ -35,6 +35,7 @@
         }
         
         let parent = document.getElementById("products") ;      //parent tag to append all items
+        parent.setAttribute('class' , 'cart_body')
         let promotion = document.getElementById("pro_app") ;    //parent tag for promo code
         let f_price = 0;                                        //total price of the cart
 
@@ -42,7 +43,7 @@
         let products_disp = JSON.parse(disp_products) ;
 
         if(products_disp === null){                             //message if cart is empty
-            let message = "Cart is Empty"
+            let message = "Your Cart is Empty"
             parent.append(message) ;
         }
         else{                                                   //creating items of cart to be displayed

@@ -49,3 +49,17 @@
     font-size: 18px;
     margin-left: 400px;
 }
+body{
+    background-color: lavender;
+}
+.cart_body{
+    width: 800px ;
+    background-color: white;
+    border: lavender 1px solid; 
+    padding: 20px;
+    margin: 50px ;
+    color: #475569;
+    text-align: center;
+    min-height: 300px;
+    font-size: 20px;
+}
