@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    
+    enter email
+    <input type="text" class="form-control" name="" id="email">
+    <br><br>
+    enter pass:
+    <input type="text" class="form-control" name="" id="pass">
+    <br>
+    <br>
+    <button type="button" class="form-control" onclick="login()">Login</button>
+
+    <script>
+        function login(){
+            var email = document.getElementById('email').value;
+
+            var pass = document.getElementById('pass').value;
+
+            var email1 = localStorage.getItem('email1');
+            var pass1 = localStorage.getItem('pass1')
+
+                console.log("login email =>"+email , email1,+ " login pass => ",pass, pass1)
+            
+            if(email==email1 && pass==pass1){
+                window.location.href ="http://127.0.0.1:5500/home.html"
+                alert("sucsess");
+            }else{
+                alert("email and pass is incorect")
+            }
+        }
+    </script>
+</body>
+</html>

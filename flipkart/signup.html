@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter name
+    <input type="text" class='form-control' name="" id="name" />
+    <br><br>
+    enter age:
+    <input type="text" class="form-control" name="" id="age">
+    <br><br>
+    enter address:
+    <input type="text" class="form-control" name="" id="address">
+    <br><br>
+    enter email
+    <input type="text" class="form-control" name="" id="email">
+    <br><br>
+    enter password
+    <input type="text" class="form-control" name="" id="pass">
+    <br><br>
+    <button type="button" onclick="signup()" class="form-control btn">Signup</button>
+
+    <script>
+        function signup(){
+           var name = document.getElementById('name').value;
+
+           var age = document.getElementById('age').value;
+
+           var address = document.getElementById('address').value;
+
+           var email = document.getElementById('email').value;
+
+           var pass = document.getElementById('pass').value;
+
+            localStorage.setItem("name1",name);
+            localStorage.setItem("age1",age)
+            localStorage.setItem("address1",address)
+            localStorage.setItem("email1",email)
+            localStorage.setItem("pass1",pass)
+
+        }
+
+
+    </script>
+</body>
+</html>
