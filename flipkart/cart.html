@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipkart</title>
-    <!-- <link href = "style.css" rel="stylesheet" > -->
+    <title>Shopping Cart | Flipkart.com</title>
+    <link rel="icon" href="images-lakshay/flipkart-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>
-        Cart
-    </h1>
+    <div id="top">
+        <label>
+            <a href=home.html><img src="images-lakshay/flipkart-head.jpg" id="logo"/></a>
+                <label class="flex">
+                    <box  id="query" type="textContent">Search for products, brands and more</box>
+                    <img src="images-lakshay/images.png" id="search" /> 
+                </label>
+        </label>
+        <a id="right" href="login.html"><button onclick=redirect()>Login</button></a>
+
+
+    </div>
+    <h2>My Cart</h2>
     <div id = "products"></div>
     <div id ="pro_app">
     </div>
@@ -30,7 +41,7 @@
         let disp_products = localStorage.getItem("cart") ;      //getting cart from local storage
         let products_disp = JSON.parse(disp_products) ;
 
-        if(products_disp === null){                             //message is cart is empty
+        if(products_disp === null){                             //message if cart is empty
             let message = "Cart is Empty"
             parent.append(message) ;
         }
@@ -80,8 +91,12 @@
             right.setAttribute = ('id' , 'order') ;
             right.setAttribute = ('href' , 'products.html') ;
 
+            let t_price = document.createElement('p');              //creating total price 
+            t_price.innerText = `Total Price:- ${f_price} Rs` ;
+            t_price.setAttribute = ('class' , 'total_price') ;      
+
             parent.append(div , right) ;
-            promotion.append(prom) ;
+            promotion.append(t_price , prom) ;
 
         })
     }

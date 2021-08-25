@@ -1,0 +1,51 @@
+#top{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #2563EB;
+    margin: 0px;
+}
+#logo{
+    position: fixed ;
+    top: 7px;
+    object-fit:fill;
+    height: 35px;
+    width: 100px;
+    margin-top: 0%;
+    margin-left: 200px;;
+}
+#query{
+    margin-left: 320px;
+    width: 500px;
+    height: 20px;
+    margin-top: 8px;
+    background-color: white;
+    color: #52525B;
+    padding: 5px;
+}
+#search{
+    height: 30px;
+    width: 25px;
+    margin-top: 8px;
+    border: 0px white solid;
+}
+
+.flex{
+    display: flex;
+    border: 0px white solid;
+    margin: 0px;
+}
+#right> button {
+    margin: 8px ;
+    height: 30px;
+    width: 150px;
+    color: #2563EB;
+    background-color: white;
+    border: white ; 
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 400px;
+}
