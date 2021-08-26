@@ -17,11 +17,10 @@
                     <img src="images-lakshay/images.png" id="search" /> 
                 </label>
         </label>
-        <a id="right" href="login.html"><button onclick=redirect()>Login</button></a>
+        <a id="right" ><button onclick=redirect() href="login.html">Login</button></a>
 
 
-    </div>
-    <h2>My Cart</h2>
+    </div >
     <div id = "products"></div>
     <div id ="pro_app">
     </div>
@@ -37,6 +36,7 @@
         let parent = document.getElementById("products") ;      //parent tag to append all items
         parent.setAttribute('class' , 'cart_body')
         let promotion = document.getElementById("pro_app") ;    //parent tag for promo code
+        promotion.setAttribute = ('class' , 'promo_box')
         let f_price = 0;                                        //total price of the cart
 
         let disp_products = localStorage.getItem("cart") ;      //getting cart from local storage
@@ -90,9 +90,9 @@
             let right = document.createElement('button') ;         //place order button
             right.textContent = "PLACE ORDER" ;
             right.setAttribute = ('id' , 'order') ;
-            right.setAttribute = ('href' , 'products.html') ;
+            // right.setAttribute = ('href' , 'products.html') ;
 
-            let t_price = document.createElement('p');              //creating total price 
+            let t_price = document.createElement('h2');              //creating total price 
             t_price.innerText = `Total Price:- ${f_price} Rs` ;
             t_price.setAttribute = ('class' , 'total_price') ;      
 

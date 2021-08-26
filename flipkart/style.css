@@ -57,9 +57,27 @@ body{
     background-color: white;
     border: lavender 1px solid; 
     padding: 20px;
-    margin: 50px ;
+    margin: 100px auto ;
     color: #475569;
     text-align: center;
     min-height: 300px;
     font-size: 20px;
+}
+#promo_box{
+    width: 370px;
+    padding: 20px;
+    float: right;
+    align-items: center;
+    background-color: white;
+    margin: 100px auto;
+}
+#order{
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    background-color: #FF5722;
+    color: white ;
+    font-weight: 500;
+    float: right ;
+    margin-right: 50px;
 }
