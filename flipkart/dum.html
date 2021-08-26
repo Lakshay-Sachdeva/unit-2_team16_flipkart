@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         #thirdbox{
+             width: 1360px;
+             height: 1000px;
+             background-color:white;
+             margin-top: 1px;
+             margin-bottom: 1px;
+             margin-left: 220px;
+             text-align: left;
+ 
+         }
+         #thirdbox>div{
+             margin-top: 1px;
+             margin-bottom: 1px;
+             margin-left: 0px;
+             margin-right: 0px;
+             background-color:white;
+             float: right;
+            
+         }
+         div>p
+         {
+             text-align:left;
+         }
+         div{
+             background-color:white;
+             margin: 1px;
+             margin-top: 1px;
+         }
+         .thirdbox2{
+             width: 850px;
+            
+             text-align:left;
+             clear: both;
+             float: right;
+            
+         }
+         .thirdbox1{
+             width: 400px;
+             float: left;
+             
+            
+         }
+         
+         
+     </style>
+ </head>
+ <body id="body">
+     <h1>products</h1>
+    <a href="cart.html"> <button>cart </button></a>
+    <br>
+    <br>
+    <label>filter by :</label>
+     <select id="brand" >
+        
+         
+         
+         <option >oppo</option>
+         <option  id="oppo" onclick="brand(2)">realme</option>
+         <option  >oneplus</option>
+         <option>mi</option>
+         <option>celkon</option>
+         <option  >karbon</option>
+         <option >micromax</option>
+         <option >iphone</option>
+     </select>
+         <select id="price">
+         
+         <option >10000</option>
+         <option >20000</option>
+         <option>30000</option>
+         <option >40000</option>
+         <option>50000</option>
+         <option >1000000</option>
+         
+         
+        
+     </select>
+ 
+     <a href="filter.html"><button onclick="submit()">submit</button></a>
+     
+     <div id="jas"></div>
+    
+     <form>
+        
+         <optio></option>
+     </form>
+     <div id="thirdbox"><h1></h1></div>
+     
+     
+    
+     
+ </body>
+ </html>
+ <script>
+      var cartdata=[]
+     var products=[{
+         name:"nokia",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7",
+         details:"realme C20 (Cool Blue, 32 GB)Add to Compare<br>realme C20 (Cool Blue, 32 GB)<br>2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
+     },
+     {
+         name:"samsug",
+         price:"90000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"realme",
+         price:"30000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"ipone",
+         price:"100000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"mi",
+         price:"30000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"oppo",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"oppo",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"one plus",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"lava",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"celkon",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"karbon",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"micromax",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"gfive",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },
+     {
+         name:"lenovo",
+         price:"20000",
+         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+ 
+     },]
+ 
+     var productsjson=JSON.stringify(products);
+     localStorage.setItem("product1",productsjson);
+     let product1=localStorage.getItem("product1")
+     product1=JSON.parse(product1)
+     //console.log(product1)
+ 
+ 
+     function show(){
+         var div= document.getElementById("thirdbox")
+         product1.forEach(function(items){
+             var div0=document.createElement("div")
+             var div1=document.createElement("div")
+             var p=document.createElement("p")
+             p.innerText=items.name
+
+            //  var pd=document.createElement("p")
+            //  pd.innerText=items.details
+ 
+ 
+             var pr=document.createElement("p")
+             pr.innerHTML=items.price
+             var img=document.createElement("img")
+             img.src=items.image
+             
+             var btn=document.createElement("button")
+             btn.innerText="add cart"
+             btn.onclick=function(){
+
+                
+                 addcart(items)
+             }
+             
+             div0.setAttribute("class","thirdbox2")
+             div1.setAttribute("class","thirdbox1")
+             div0.append(p,pr,btn)
+             div1.append(img)
+             div.append(div0,div1)
+            
+         })
+     }
+     show();
+    
+     
+     
+    
+     localStorage.setItem("cart",JSON.stringify(cartdata));
+       function addcart(x){
+      
+        
+ var cartdata=JSON.parse(localStorage.getItem("cart"));
+ cartdata.push(x)
+ localStorage.setItem("cart",JSON.stringify(cartdata))
+       }
+       
+ 
+ 
+       var farr=[]
+       function submit(){
+          var ba=document .getElementById("brand").value
+        var pri=document .getElementById("price").value
+
+        
+       
+        
+        for(i=0;i<products.length;i++){
+            if(ba===products[i].name){
+                farr.push(products[i])
+
+
+                localStorage.setItem("filter",JSON.stringify(farr))
+                console.log(farr)
+              
+              
+
+            }
+            
+        }
+          
+
+              
+      }
+ 
+ 
+ </script>
