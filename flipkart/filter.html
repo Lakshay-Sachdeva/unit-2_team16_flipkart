@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+       
+   header{
+    width: 1400px;
+    height: 50px;
+    background-color: blue;
+    position: sticky;
+    top: 0;
+    display: inline-block;
+}
+
+header img{
+  
+    width: 100px;
+    height: 40px;
+    margin-left: 20px;
+    display: inline;
+    margin-top: 0px;
+}
+
+
+
+header p{
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;   
+    display: inline;
+}
+
+header input{
+    width: 500px;
+    margin-left: 10px;
+    font-size: 15px;   
+    margin-bottom: 10px;
+    
+}
+
+header button{
+    color: black;
+    font-size: 15px;   
+}
+.fistbox{
+width: 300px;
+height:1000px;
+background-color:antiquewhite;
+clear: both;
+float: left;
+
+}
+#thirdbox{
+             width: 900px;
+             height: 1000px;
+             background-color:white;
+             margin-top: 40px;
+             margin-bottom: 1px;
+           margin-left: 220px;
+             text-align: left;
+             float: left;
+             
+         }
+         .thirdbox1{
+             width: 300px;
+             height: 400px;
+             background-color:white;
+             float: left;
+             
+         }
+         .thirdbox2{
+             width: 400px;
+             height: 400px;
+             background-color:white;
+             float: right;
+             margin-right: 100px;
+             
+         }
+         
+         
+         
+         
+    </style>
+</head>
+<body id="body">
+    <header><center>
+        <img class="image1" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="">
+
+        <input type="text" placeholder="Search for products,brands and more">
+        <button>Login</button>
+        
+        <a href="cart.html"> <button>cart </button></a>
+    </header></center>
+    <br>
+   
+  
+   <br>
+    <div class="fistbox">
+    <label>filter by :</label>
+     <select id="brand" >
+        
+         
+         
+         <option >oppo</option>
+         <option  id="oppo" onclick="brand(2)">realme</option>
+         <option  >oneplus</option>
+         <option>mi</option>
+         <option>celkon</option>
+         <option  >karbon</option>
+         <option >micromax</option>
+         <option >iphone</option>
+     </select>
+         <select id="price">
+         
+         <option >10000</option>
+         <option >20000</option>
+         <option>30000</option>
+         <option >40000</option>
+         <option>50000</option>
+         <option >1000000</option>
+         
+         
+        
+     </select>
+ 
+     <a href="filter.html"><button onclick="submit()">submit</button></a>
+    </div>
+    <div id="thirdbox"></div>
+   
+    
+   
+    
+</body>
+
+<script>
+  
+    var filte= JSON.parse(localStorage.getItem("filter"));
+   
+    var div= document.getElementById("thirdbox")
+    filte.forEach(function(items){
+        var div0=document.createElement("div")
+        var div1=document.createElement("div")
+        var p=document.createElement("p")
+            p.innerText=items.name
+
+            var pr=document.createElement("p")
+            pr.innerHTML=items.price
+            var img=document.createElement("img")
+            img.src=items.image
+            var btn=document.createElement("button")
+             btn.innerText="add cart"
+             btn.onclick=function(){
+
+                
+                 addcart(items)
+             }
+            div0.setAttribute("class","thirdbox2")
+             div1.setAttribute("class","thirdbox1")
+            div0.append(p,pr,btn)
+             div1.append(img)
+            div.append(div0,div1)
+            
+    })
+    
+    
+    let products=localStorage.getItem("product1")
+        products=JSON.parse(products)
+    
+        
+    
+        
+       function submit(){
+        var ba=document .getElementById("brand").value
+        var pri=document .getElementById("price").value
+       
+        localStorage.setItem("filter",JSON.stringify([]))
+     
+        
+        var farr=[]
+        
+       
+  
+       
+        for(i=0;i<products.length;i++){
+            if(ba===products[i].name){
+                farr.push(products[i])
+
+
+                localStorage.setItem("filter",JSON.stringify(farr))
+              
+              
+              
+
+            }
+            
+        }
+          
+
+              
+      }
+      console.log(ba)
+      function addcart(x){
+      
+        
+      var cartdata=JSON.parse(localStorage.getItem("cart"));
+      cartdata.push(x)
+      localStorage.setItem("cart",JSON.stringify(cartdata))
+            }
+ 
+    
+</script>
+</html>
