@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         body{
+             background-color: lavender;
+         }
+        
+
+
+
+
+
+
+header input{
+    width: 500px;
+    margin-left: 10px;
+    font-size: 15px;   
+    margin-bottom: 10px;
+    
+}
+
+header button{
+    color: black;
+    font-size: 15px;   
+}
+.fistbox{
+margin-top: 0px;
+width: 300px;
+height: auto;
+background-color:lavender;
+float: left;
+margin-top: px;
+
+}
+         #thirdbox{
+             width: 1130px;
+             height:auto;
+             background-color:white;
+             margin-top: 20px;
+             margin-bottom: px;
+             margin-left: 10px;
+             text-align: left;
+             padding: 30px;
+             float: left;  
+         }
+         .thirdbox1{
+             width: 300px;
+             height: 400px;
+             background-color:white;
+             float: left;
+             
+         }
+         .thirdbox2{
+             width: 400px;
+             height: 400px;
+             background-color:white;
+             float: right;
+             margin-right: 400px;
+             
+         }
+         .filter{
+             background-color: white;
+             font-family: sans-serif;
+             width: 270px;
+             padding: 15px;
+           
+            margin-bottom: 1px;
+         }
+         
+         .ram{
+            background-color: white;
+            margin-bottom: 1px;
+            padding: 15px;
+         }
+.brand {
+    background-color: white;
+    margin-bottom: 1px;
+   
+    padding-bottom: 0px;
+}
+.dis{
+    background-color: white;
+    
+    padding-top: 0px;
+    padding-bottom: 0px;
+   
+}
+         
+         
+     </style>
+ </head>
+
+ <body id="body">
+    <header></header>
+    <script src = "header.js"></script>
+    <br>
+    
+    
+    <br>
+    <br>
+    <div class="fistbox">
+    <h1 class="filter">filters</h1>
+    <div class="brand">
+     <select id="brand" >
+        
+         
+         
+         <option >oppo</option>
+         <option >poco</option>
+         <option >realme</option>
+         <option  >oneplus</option>
+         <option>mi</option>
+         <option>celkon</option>
+         <option  >karbon</option>
+         <option >micromax</option>
+         <option >iphone</option>
+     </select>
+         <select id="price">
+         
+         <option >10000</option>
+         <option >20000</option>
+         <option>30000</option>
+         <option >40000</option>
+         <option>50000</option>
+         <option >1000000</option>
+         
+         
+         
+        
+     </select>
+   
+ 
+     <a href="filter.html"><button onclick="submit()">submit</button></a>  
+</select>
+</div>
+<div class="ram">
+
+
+<label>Ram :</label><br>
+<input type="checkbox" name="">4 GB<br>
+<input type="checkbox" name="">6 GB<br>
+<input type="checkbox" name="">8 GB<br>
+<input type="checkbox" name="">10 GB<br>
+<input type="checkbox" name="">12 GB<br>
+</div><br>
+
+<div class="dis">
+<label>Discount :</label><br>
+<input type="checkbox" name="">50% or more<br>
+<input type="checkbox" name="">40% or more<br>
+<input type="checkbox" name="">30% or more<br>
+<input type="checkbox" name="">20% or more<br>
+<input type="checkbox" name="">10% or more<br>
+<input type="checkbox" name="">Below 10%<br><br>
+
+<label>Availability</label><br>
+</div>
+
+    </div>
+     
+     <div id="jas"></div>
+    
+     <form>
+        
+         <optio></option>
+     </form>
+     <div id="thirdbox"><h1></h1></div>
+     
+     
+   
+     
+ </body>
+ </html>
+ <script>
+      var cartdata=[]
+     var products=[{
+         name:"realme",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+         details:"realme C20 (Cool Blue, 32 GB)Add to Compare<br>realme C20 (Cool Blue, 32 GB)<br>2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
+     },
+     {
+         name:"poco",
+         price:"90000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kklhbbk0/mobile/h/i/q/m3-mzb087ain-poco-original-imafzxf8zqkcgwfv.jpeg?q=70"
+ 
+     },
+     {
+         name:"realme",
+         price:"30000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"ipone",
+         price:"100000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"mi",
+         price:"30000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"oppo",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"oppo",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"oneplus",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"lava",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"celkon",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"karbon",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"micromax",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"gfive",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },
+     {
+         name:"lenovo",
+         price:"20000",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+     },]
+ 
+     var productsjson=JSON.stringify(products);
+     localStorage.setItem("product1",productsjson);
+     let product1=localStorage.getItem("product1")
+     product1=JSON.parse(product1)
+     //console.log(product1)
+ 
+ 
+     function show(){
+         var div= document.getElementById("thirdbox")
+         product1.forEach(function(items){
+             var div0=document.createElement("div")
+             var div1=document.createElement("div")
+             var p=document.createElement("p")
+             p.innerText=items.name
+
+            //  var pd=document.createElement("p")
+            //  pd.innerText=items.details
+ 
+ 
+             var pr=document.createElement("p")
+             pr.innerHTML=items.price
+             var img=document.createElement("img")
+             img.src=items.image
+             
+             var btn=document.createElement("button")
+             btn.innerText="add cart"
+             btn.onclick=function(){
+
+                
+                 addcart(items)
+             }
+             
+             div0.setAttribute("class","thirdbox2")
+             div1.setAttribute("class","thirdbox1")
+             div0.append(p,pr,btn)
+             div1.append(img)
+             div.append(div0,div1)
+            
+         })
+     }
+     show();
+    
+     
+     
+    var cartdata=[]
+    // localStorage.setItem("cart",JSON.stringify(cartdata));
+       function addcart(x){
+      
+        
+ var cartdata=JSON.parse(localStorage.getItem("cart"));
+ cartdata.push(x)
+ localStorage.setItem("cart",JSON.stringify(cartdata))
+       }
+       
+ 
+ 
+       var farr=[]
+       function submit(){
+          var ba=document .getElementById("brand").value
+        var pri=document .getElementById("price").value
+
+        
+       
+        
+        for(i=0;i<products.length;i++){
+            if(ba===products[i].name){
+                farr.push(products[i])
+
+
+                localStorage.setItem("filter",JSON.stringify(farr))
+                console.log(farr)
+              
+              
+
+            }
+            
+        }
+          
+
+              
+      }
+ 
+ 
+ </script>
