@@ -6,32 +6,15 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <style>
-         header{
-    width: 100%;
-    height: 50px;
-    background-color: blue;
-    position: sticky;
-    top: 0;
-    display: inline-block;
-}
 
-header img{
-  
-    width: 100px;
-    height: 40px;
-    margin-left: 20px;
-    display: inline;
-    margin-top: 0px;
-}
+
+         body{
+             background-color: lavender;
+         }
+        
 
 
 
-header p{
-    color: white;
-    font-family: sans-serif;
-    font-size: 15px;   
-    display: inline;
-}
 
 header input{
     width: 500px;
@@ -46,20 +29,25 @@ header button{
     font-size: 15px;   
 }
 .fistbox{
+
+margin-top: 0px;
 width: 300px;
-height: 2000px;
-background-color:antiquewhite;
+height: auto;
+background-color:lavender;
 float: left;
+margin-top: px;
 
 }
          #thirdbox{
-             width: 960px;
-             height: 1000px;
+             width: 1130px;
+             height:auto;
              background-color:white;
-             margin-top: px;
+             margin-top: 20px;
              margin-bottom: px;
-             margin-left: 220px;
+             margin-left: 10px;
              text-align: left;
+             padding: 30px;
+
              float: left;  
          }
          .thirdbox1{
@@ -74,10 +62,38 @@ float: left;
              height: 400px;
              background-color:white;
              float: right;
-             margin-right: 100px;
+
+
+             margin-right: 400px;
              
          }
+         .filter{
+             background-color: white;
+             font-family: sans-serif;
+             width: 270px;
+             padding: 15px;
+           
+            margin-bottom: 1px;
+         }
          
+         .ram{
+            background-color: white;
+            margin-bottom: 1px;
+            padding: 15px;
+         }
+.brand {
+    background-color: white;
+    margin-bottom: 1px;
+   
+    padding-bottom: 0px;
+}
+.dis{
+    background-color: white;
+    
+    padding-top: 0px;
+    padding-bottom: 0px;
+   
+}
 
          
          
@@ -85,27 +101,31 @@ float: left;
  </head>
 
  <body id="body">
-    <header><center>
-        <img class="image1" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="">
 
-        <input type="text" placeholder="Search for products,brands and more">
-        <button>Login</button>
-        
-        <a href="cart.html"> <button>cart </button></a>
-    </header></center>
+
+    <header></header>
+    <script src = "header.js"></script>
+
     <br>
     
     
     <br>
     <br>
     <div class="fistbox">
-    <label>filter by :</label>
+
+
+    <h1 class="filter">filters</h1>
+    <div class="brand">
+
      <select id="brand" >
         
          
          
          <option >oppo</option>
-         <option  id="oppo" onclick="brand(2)">realme</option>
+
+         <option >poco</option>
+         <option >realme</option>
+
          <option  >oneplus</option>
          <option>mi</option>
          <option>celkon</option>
@@ -123,10 +143,40 @@ float: left;
          <option >1000000</option>
          
          
+
+
+         
         
      </select>
+   
  
-     <a href="filter.html"><button onclick="submit()">submit</button></a>
+     <a href="filter.html"><button onclick="submit()">submit</button></a>  
+</select>
+</div>
+<div class="ram">
+
+
+<label>Ram :</label><br>
+<input type="checkbox" name="">4 GB<br>
+<input type="checkbox" name="">6 GB<br>
+<input type="checkbox" name="">8 GB<br>
+<input type="checkbox" name="">10 GB<br>
+<input type="checkbox" name="">12 GB<br>
+</div><br>
+
+<div class="dis">
+<label>Discount :</label><br>
+<input type="checkbox" name="">50% or more<br>
+<input type="checkbox" name="">40% or more<br>
+<input type="checkbox" name="">30% or more<br>
+<input type="checkbox" name="">20% or more<br>
+<input type="checkbox" name="">10% or more<br>
+<input type="checkbox" name="">Below 10%<br><br>
+
+<label>Availability</label><br>
+</div>
+
+
     </div>
      
      <div id="jas"></div>
@@ -145,88 +195,116 @@ float: left;
  <script>
       var cartdata=[]
      var products=[{
-         name:"nokia",
+
+
+         name:"realme",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7",
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
          details:"realme C20 (Cool Blue, 32 GB)Add to Compare<br>realme C20 (Cool Blue, 32 GB)<br>2 GB RAM | 32 GB ROM | Expandable Upto 256 GB",
      },
      {
-         name:"samsug",
+         name:"poco",
          price:"90000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+         image:"https://rukminim1.flixcart.com/image/312/312/kklhbbk0/mobile/h/i/q/m3-mzb087ain-poco-original-imafzxf8zqkcgwfv.jpeg?q=70"
+
  
      },
      {
          name:"realme",
          price:"30000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"ipone",
          price:"100000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"mi",
          price:"30000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+
  
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"oppo",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
  
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"oppo",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
+
  
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"oneplus",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"lava",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"celkon",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"karbon",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"micromax",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"gfive",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },
      {
          name:"lenovo",
          price:"20000",
-         image:"https://th.bing.com/th/id/OIP.Hd18hNdbQHhyrN6vHEYhFgHaD4?w=313&h=180&c=7&o=5&dpr=1.25&pid=1.7"
- 
+
+
+         image:"https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70",
+
      },]
  
      var productsjson=JSON.stringify(products);
