@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        * {
+            margin: 0px;
+            background-color: #e8eaec;
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        #header {
+            height: 50px;
+            color: whitesmoke;
+            font-weight: 1000;
+            font-size: 30px;
+            background: #2874f0;
+            padding: 10px 50px;
+        }
+
+        #main {
+            display: grid;
+            height: 600px;
+            grid-gap: 0.2ch;
+            grid-template-columns: 70% 28%;
+            padding: 2%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "d1 d5""d2 d5""d3 d5""d4 d5";
+        }
+
+        #main>div {
+            border: red solid 1px;
+        }
+
+
+        #submain_div_1 {
+            grid-area: d1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 15% 90%;
+            grid-template-areas: "div_head div_head" "submain_div_1_body info_div_1";
+        }
+
+
+        .submain_div_1_body>input,
+        p {
+            width: 85%;
+            border: none;
+            padding: 1px 20px;
+            margin: 10px;
+            height: 30px;
+        }
+
+        .submain_div_1_body>button {
+            width: 90%;
+            border: none;
+            padding: 10px 20px;
+            background-color: #FB641B;
+            cursor:pointer;
+            margin: 10px 20px 20px;
+            text-align: center;
+        }
+        .submain_div_1_body{
+            grid-area:submain_div_1_body;
+        }
+
+        #info_submain_div_1{
+            padding: 10px;
+            border: solid 1px rgb(40, 64, 206);
+        }
+
+
+        #submain_div_2 {
+            grid-area: d2;
+        }
+
+        #submain_div_3 {
+            grid-area: d3;
+        }
+
+        #submain_div_4 {
+            grid-area: d4;
+        }
+
+        #submain_div_5 {
+            grid-area: d5;
+        }
+
+        .div_head {
+            padding: 20px;
+            grid-area: div_head;
+        }
+        .div_head_1{
+            color: #fff;
+            background-color: #2874f0;
+        }
+        #submain_div_2 ,#submain_div_3, #submain_div_4 {
+            color: #796e6e;
+            padding: 14px 24px;
+            background-color: rgb(221, 220, 220);
+            font-size: 16px;
+        }
+
+        .div_head>span {
+            background: #fff;
+            color: #2874f0;
+            padding: 2px 5px;
+            border-radius: 20%;
+            margin: 1% 10px;
+        }
+
+        footer{
+            display: grid;
+            grid-template-columns: 40% 30% 30%;
+            grid-template-rows: 1fr;
+            grid-template-areas:"f1 f2 f3";
+        }
+        #f1, #f2, #f3{
+            color: rgb(128, 126, 126);
+            font-size: 12px;
+            text-align: center;
+            margin: 10px;
+        }
+        #f3 span{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        Flipcart
+    </div>
+    <div id="main">
+        <div id="submain_div_1">
+            <div class="div_head div_head_1"> <span>1</span>LOGIN OR SIGNUP</div>
+            <div class="submain_div_1_body">
+                <input type="text" class="form-control" name="" id="name" placeholder="Enter Name" required>
+                <br>
+                <input type="email" class="form-control" name="" id="email" placeholder="Enter Email" required>
+                <br>
+                <input type="text" class="form-control" name="" id="pass" placeholder="Enter Password" required>
+                <br>
+                <p>If you are already register, Please <a href="login.html"><b>Login</b></a> Here</p>
+                <p id="small_notice">By coninuing, you agree to Flipcart's <a href="#">Terms of Use</a> and <a
+                        href="#">Privacy Policy.</a></p>
+                <br>
+                <button type="button" class="form-control" onclick="signup()">Register</button>
+            </div>
+            <div id="info_submain_div_1"><span>Advantages of our secure login</span>
+                <div class="info_sub_div_1"></div>
+                <div class="info_sub_div_2"></div>
+                <div class="info_sub_div_3"></div>
+                <div class="info_sub_div_4"></div>
+            </div>
+
+
+        </div>
+        <div id="submain_div_2"><div class="div_head"> <span>2</span>Delivery Address</div></div>
+        <div id="submain_div_3"><div class="div_head"> <span>3</span>Order Summary</div></div>
+        <div id="submain_div_4"><div class="div_head"> <span>4</span>Payment Options</div></div>
+        <div id="submain_div_5">
+            <div>
+                <img src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt=""><div>Safe and Secure Payments. Easy returns. 100% Authentic products.</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <div id="f1">
+            <span>Policies: </span>
+            <span>Returns Policy </span>
+            <span>| Terms of use </span>
+            <span>| Security </span>
+            <span>| Privacy </span>
+            <span>| Infringement </span>
+        </div>
+        <div id="f2">© 2007-2021 Flipkart.com</div>
+        <div id="f3" >Need help? Visit the <span>Help Center</span> or <span>Contact Us</span> </div>
+    </footer>
+
+<script>
+    function signup(){
+           var name = document.getElementById('name').value;
+           var email = document.getElementById('email').value;
+           var pass = document.getElementById('pass').value;
+
+            localStorage.setItem("name1",name);
+            localStorage.setItem("email1",email)
+            localStorage.setItem("pass1",pass)
+            alert("Register Sucessfully");
+            window.location.href ="/login.html"
+                
+            
+        }
+
+</script>
+
+</body>
+
+</html>
