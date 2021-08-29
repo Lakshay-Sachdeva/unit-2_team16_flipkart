@@ -80,10 +80,12 @@
             
         })
         let right = document.createElement('button') ;         //place order button
-            right.textContent = "PLACE ORDER" ;
+        let a_right = document.createElement('a') ;
+        right.textContent = "PLACE ORDER" ;
             right.id =  "order"; 
-            right.href = "payment.html" 
-            promotion.append(right) ;
+            a_right.append(right) ;
+            a_right.href = "payment.html" 
+            promotion.append(a_right) ;
 
 
             var prom = document.createElement('div') ;          //creating promo div
