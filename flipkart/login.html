@@ -145,22 +145,42 @@
             color:blue;
         }
         header{
-            background-color: #2874f0;
-            height: 100px;
-            margin-bottom: -100px;
             display: grid;
-
+            height: 80px;
+            margin-bottom: -100px;
+            grid-template-columns: 15% 10% 75%;
+            grid-template-rows:1fr;
+            grid-template-areas: "h1 h2 h3";
+            width: 100%;
         }
+        #head_div_1{
+            grid-area: h1;
+            background-color: #2874f0;
+        }
+        #head_div_2{
+            grid-area: h2;
+            background-color: #2874f0;
+        }
+        #head_div_3{
+            grid-area: h3;
+            background-color: #2874f0;
+        }
+        header img {
+            width: 100px;
+            margin-top: 15%;
+            
+        }
+
     </style>
 </head>
 
 <body>
 <header>
-
+    <div id="head_div_1"></div>
+    <div id="head_div_2"><img src="/images-lakshay/flipkart-head.jpg" alt="" onclick="img()"></div>
+    <div id="head_div_3"></div>
 </header>
-    <!-- <div id="header">
-        Flipcart
-    </div> -->
+   
 
 
 
@@ -232,6 +252,9 @@
             }
         }
 
+        function img(){
+            window.location.href = "home.html"
+        }
 </script>
 
 </body>
