@@ -116,7 +116,7 @@
 
     <script>
         var cart = [] ;
-        if(cart === null){
+        if(localStorage.getItem(cart) === null){
         localStorage.setItem('cart' , JSON.stringify(cart)) ;
     }
     </script>
