@@ -29,7 +29,7 @@
             grid-template-columns: 70% 28%;
             padding: 2%;
             grid-template-rows: 1fr 1fr 1fr 1fr;
-            grid-template-areas: "d2 d5""d3 d5""d4 d5""d1 d5";
+            grid-template-areas: "d2 d5""d3 d5""d1 d5";
         }
 
 
@@ -150,7 +150,7 @@
     </div>
     <div id="main">
         <div id="submain_div_1">
-            <div class="div_head div_head_1"> <span>1</span>PAYMENT OPTION</div>
+            <div class="div_head div_head_1"> <span>3</span>PAYMENT OPTION</div>
             <div class="submain_div_1_body">
                 <input type="text" class="form-control" name="" id="mobie" placeholder="16-digit Card Number" required>
                 <br>
@@ -159,7 +159,7 @@
                 <button type="button" class="form-control" onclick="saveAddress()">Make Payment</button>
             </div>
             <div id="info_submain_div_1">
-                <input type="text" class="form-control" name="" id="pin" placeholder="VCC" required>
+                <input type="text" class="form-control" name="" id="pin" placeholder="CVV" required>
                 <br>
                 <select name="cards" id="card_type">
                     <option value="volvo">Debit Card</option>
@@ -171,10 +171,10 @@
         <div id="submain_div_2"><div class="div_head"> <span>1</span>LOGIN OR SIGNUP<span id="tick"><img
             src="https://t4.ftcdn.net/jpg/02/23/98/51/240_F_223985198_6MRkrjq8ldwltNpyQYbqRUN1u0ndZ5IV.jpg"
             alt=""></span></div></div>
-        <div id="submain_div_3"><div class="div_head"><span>2</span>DELEVERY ADDRESS<span id="tick"><img
+        <div id="submain_div_3"><div class="div_head"><span>2</span>DELIVERY ADDRESS<span id="tick"><img
             src="https://t4.ftcdn.net/jpg/02/23/98/51/240_F_223985198_6MRkrjq8ldwltNpyQYbqRUN1u0ndZ5IV.jpg"
             alt=""></span></div></div>
-        <div id="submain_div_4"><div class="div_head"><span>3</span>LOGIN OR SIGNUP<span id="tick"><img
+        <div id="submain_div_4"><div class="div_head"><span>3</span>ORDER SUMMARY<span id="tick"><img
             src="https://t4.ftcdn.net/jpg/02/23/98/51/240_F_223985198_6MRkrjq8ldwltNpyQYbqRUN1u0ndZ5IV.jpg"
             alt=""></span></div></div>
         <div id="submain_div_5">
@@ -198,17 +198,28 @@
 
 <script>
     var card_demo= [1234567812345678]
-    var pin_demo = [123456]
+    var pin_demo = [123]
+    function a(){
+        alert("Payment succerssfull")
+    }
+    function b(){
+        alert("Payment Faild")
+    }
     function saveAddress(){
 
         var card = document.getElementById('mobie').value;
            var pin = document.getElementById('pin').value;
            var card_Holder_name = document.getElementById('pass').value;
 
-          console.log(card ,pin ,typeof(card))
-
-          var b = 
-            window.location.href ="/home.html"
+          if(Number(card) == card_demo && Number(pin)){
+            setTimeout(a,600);
+            count++;
+          }else{
+            setTimeout(b,800)
+          }
+          
+    // window.location.href ="/home.html"
+          
         }
 
 </script>
