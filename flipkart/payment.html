@@ -226,6 +226,16 @@
     </footer>
 
 <script>
+        var email2 = localStorage.getItem('email1');
+        var pass2 = localStorage.getItem('pass1');
+        function flag(){
+            if(email2 ==null&& pass2==null){
+                window.location.href = "signup.html"
+            }
+        }
+
+        setTimeout(flag,2000);
+      
     var card_demo= [1234567812345678]
     var pin_demo = [123]
     function a(){
@@ -249,6 +259,9 @@
           
     // window.location.href ="/home.html"
           
+    function fleg(){
+        
+    }
         }
         function img(){
             window.location.href = "home.html"
