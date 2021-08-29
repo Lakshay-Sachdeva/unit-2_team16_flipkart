@@ -17,27 +17,31 @@
                     <img src="images-lakshay/images.png" id="search" /> 
                 </label>
         </label>
-        <a id="right" ><button onclick=redirect() href="login.html">Login</button></a>
+        <a id="right" href="login.html"><button onclick=redirect()>Login</button></a>
 
 
     </div >
-    <div id = "products"></div>
-    <div id ="pro_app">
+    <div id="body">
+        <div id ="pro_app"></div>
+        <div id = "products"></div>
+        <div id="p_o"></div>
     </div>
     <script>
-        let discount = {
-            masai30: 30 ,
-            masai20: 20 ,
-            masai10: 10,
-            masai_bonus: 50,
-            masai_grad: 90
-        }
+    //     let discount = [
+    //         {masai30: 30} ,
+    //         {masai20: 20} ,
+    //         {masai10: 10},
+    //         {masai_bonus: 50},
+    //         {masai_grad: 90}
+    // ]
+        // console.log(discount[0].keys);
         
         let parent = document.getElementById("products") ;      //parent tag to append all items
         parent.setAttribute('class' , 'cart_body')
-        let promotion = document.getElementById("pro_app") ;    //parent tag for promo code
-        promotion.setAttribute = ('class' , 'promo_box')
-        let f_price = 0;                                        //total price of the cart
+        let promotion = document.querySelector("#pro_app") ;    //parent tag for promo code
+        // promotion.class = "promo_box"
+        let order = document.getElementById("p_o") ;
+        var f_price = 0;                                        //total price of the cart
 
         let disp_products = localStorage.getItem("cart") ;      //getting cart from local storage
         let products_disp = JSON.parse(disp_products) ;
@@ -57,49 +61,79 @@
             i_price = item.price ;
             let i_image = document.createElement('img') ;
             i_image.src = item.image ;
-            
-            f_price += Number(item.price) ;                     //updating total price
-            div.append(i_image , i_name , i_price ) ;           //creating div for 1 item
+            i_image.style.width = '150px';
+            i_image.style.height = '300px';
 
-            let prom = document.createElement('div') ;          //creating promo div
+            let i_div = document.createElement('div') ;
+            
+            f_price = f_price + Number(item.price) ;
+            i_div.append(i_name , i_price) ;                  
+            div.append(i_image , i_div ) ;         
+            div.style.display = 'flex' ;
+            div.style.gap = '20px';
+            div.style.margin = '30px' ;
+
+
+                 
+
+            parent.append(div) ;
+            
+        })
+        let right = document.createElement('button') ;         //place order button
+            right.textContent = "PLACE ORDER" ;
+            right.id =  "order"; 
+            right.href = "payment.html" 
+            promotion.append(right) ;
+
+
+            var prom = document.createElement('div') ;          //creating promo div
             prom.setAttribute('class' , 'promo') ;
-            let title = document.createElement('p') ;
+            var title = document.createElement('p') ;
             title.textContent = "Apply Promo" 
-            let inp = createElement('input') ;
+            title.style.fontSize = '20px' ;
+            var inp = document.createElement('input') ;
             inp.setAttribute = ('type' , 'text') ;              //taking input for promo code
-            inp.setAttribute = ('id' , 'promo_code') ;
-            inp.setAttribute = ('placeholder' , 'Enter Code') ;
-            let btn_1 = document.createElement('button') ;      //apply button
+            inp.id = "promo_code" ;
+            inp.placeholder = 'Enter Code' ;
+            inp.style.padding = '5px' ;
+            inp.style.width = '100px' ;
+            inp.style.marginRight = '10px' ;
+            var btn_1 = document.createElement('button') ;      //apply button
             btn_1.setAttribute = ('id' , 'apply_promo') ;
             btn_1.textContent = "Apply" ;
             btn_1.addEventListener('click' , apply) ;
+            btn_1.style.height = '28px' ;
+            btn_1.style.fontSize = '18px' ;
+            btn_1.style.background = '#FF8F00' ;
 
             prom.append(title , inp , btn_1) ;
 
             function apply() {                                  //apply promo function
-                let code = document.getElementById('promo_code').value ;
-                if(code == discount["keys"]){
-                    let num = discount[keys] ;
-                    f_price = (f_price * num) / 100 ;
+                var code = document.getElementById('promo_code').value ;
+                if(code == "masai30"){
+                    // console.log(code);
+                    // var num = discount[keys] ;
+                    f_price = (f_price * 70) / 100 ;
+                    // console.log(f_price) ;
+
+                    t_price.innerText = `Total Price:- Rs ${f_price}`;
                 }
                 else{
-                    alert("Please enter valid Promo Code") ;    
+                    alert("Please enter valid Promo Code") ; 
+                    t_price.innerText = `Total Price:- Rs ${f_price}`;   
                 }
             }
 
-            let right = document.createElement('button') ;         //place order button
-            right.textContent = "PLACE ORDER" ;
-            right.setAttribute = ('id' , 'order') ;
-            // right.setAttribute = ('href' , 'products.html') ;
+            let text = `Total Price:- Rs ${f_price}`;
 
-            let t_price = document.createElement('h2');              //creating total price 
-            t_price.innerText = `Total Price:- ${f_price} Rs` ;
-            t_price.setAttribute = ('class' , 'total_price') ;      
 
-            parent.append(div , right) ;
-            promotion.append(t_price , prom) ;
-
-        })
+            let t_price = document.createElement('p');              //creating total price 
+            t_price.innerText =  text ;
+            // t_price.class = "total_price" ;
+            t_price.style.fontSize = '24px' ;
+            t_price.style.fontWeight = '600' ;
+            promotion.append(t_price) ;
+            promotion.append(prom) ;
     }
     </script>
     
