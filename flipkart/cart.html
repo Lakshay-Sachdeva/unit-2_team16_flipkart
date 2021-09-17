@@ -27,14 +27,6 @@
         <div id="p_o"></div>
     </div>
     <script>
-    //     let discount = [
-    //         {masai30: 30} ,
-    //         {masai20: 20} ,
-    //         {masai10: 10},
-    //         {masai_bonus: 50},
-    //         {masai_grad: 90}
-    // ]
-        // console.log(discount[0].keys);
         
         let parent = document.getElementById("products") ;      //parent tag to append all items
         parent.setAttribute('class' , 'cart_body')
@@ -129,9 +121,8 @@
             let text = `Total Price:- Rs ${f_price}`;
 
 
-            let t_price = document.createElement('p');              //creating total price 
+            let t_price = document.createElement('p');             
             t_price.innerText =  text ;
-            // t_price.class = "total_price" ;
             t_price.style.fontSize = '24px' ;
             t_price.style.fontWeight = '600' ;
             promotion.append(t_price) ;
