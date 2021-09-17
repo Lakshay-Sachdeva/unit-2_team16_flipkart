@@ -6,53 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping Site for Mobile, Electronics, Furniture, Grocery, Lifestyle, Books $ More. Best Offers!</title>
     <link rel="icon" href="images-lakshay/flipkart-logo.png" type="image/x-icon" />
-    <style>
-        #navigation{
-            display: flex;
-            margin-top: 70px;
-            text-align: center;
-        }
-        #navigation img {
-            width: 80px;
-        }
-        .rows{
-            display:flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        .rows >p{
-            font-size: 22px;
-        }
-        .rows > figure > img {
-            width: 100px;
-            height : 150px;
-        }
-        .rows button {
-            height: 50px;
-            width: 100px;
-            color: white;
-            background-color: #1976D2;
-            font-size: 20px;
-        }
-        .rows > figure > figcaption{
-            margin-top: 5px;
-            font-size: 18px;
-        }
-        hr{
-            color: #616161;
-        }
-        a{
-            color: black ;
-        }
-        #courosel{
-            width: 100%;
-            height: 400px;
-        }
-        /* #courosel img{
-           width: max-content ;
-           height: max-content;
-        } */
-    </style>
+    <link rel="stylesheet" href="./home.css">
 </head>
 <body>
     <header></header>
@@ -228,7 +182,7 @@
     <footer></footer>
 
     <script>
-        let cour = document.getElementById("courosel")          ///images-lakshay/courosel_1.jpg
+        let cour = document.getElementById("courosel") ;
         var i = 0 ;
         let slido = [ "images-lakshay/courosel_1.jpg" , "images-lakshay/courosel2.jpg" , "images-lakshay/courosel3.jpeg" , "images-lakshay/courosel4.jpeg" , "images-lakshay/courosel5.jpeg" , "images-lakshay/courosel6.jpeg"]
         var image = document.createElement('img') ;
@@ -237,13 +191,14 @@
         var slider = setInterval(function slider() {
             if(i == 6){
                 i = 0 ;
-            }            
+            }          
+            cour.innerHTML = null ;  
             image.src = slido[i] ;   
             cour.append(image) ;
             i++
-        }, 4000);        
+        }, 2000);        
 
-        // cour.style.objectFit = "fill" 
+        
         
 
 
