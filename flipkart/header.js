@@ -1,7 +1,9 @@
 //parent div, where everything has to be appended
-let parent = document.querySelector('header') ;
+// let parent = document.querySelector('header') ;
 //for all sub elements
-let head = document.createElement('div');
+
+function navbar(){
+    return `let head = document.createElement('div');
 head.style.background = '#2563EB' ;
 head.style.position = 'fixed' ;
 head.style.top = '0';
@@ -112,4 +114,8 @@ parent.append(head) ;
 
 search_product = function(){
 
+}`
 }
+
+
+export default navbar ;
