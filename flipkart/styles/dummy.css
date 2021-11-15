@@ -1,0 +1,67 @@
+body{
+background-color: lavender;
+}
+header input{
+width: 500px;
+margin-left: 10px;
+font-size: 15px;   
+margin-bottom: 10px;
+}
+header button{
+color: black;
+font-size: 15px;   
+}
+.fistbox{
+margin-top: 0px;
+width: 300px;
+height: auto;
+background-color:lavender;
+float: left;
+margin-top: px;
+}
+#thirdbox{
+width: 1130px;
+height:auto;
+background-color:white;
+margin-top: 20px;
+margin-bottom: px;
+margin-left: 10px;
+text-align: left;
+padding: 30px;
+float: left;  
+}
+.thirdbox1{
+width: 300px;
+height: 400px;
+background-color:white;
+float: left;
+}
+.thirdbox2{
+width: 400px;
+height: 400px;
+background-color:white;
+float: right;
+margin-right: 400px;
+}
+.filter{
+background-color: white;
+font-family: sans-serif;
+width: 270px;
+padding: 15px;
+margin-bottom: 1px;
+}
+.ram{
+background-color: white;
+margin-bottom: 1px;
+padding: 15px;
+}
+.brand {
+background-color: white;
+margin-bottom: 1px;
+padding-bottom: 0px;
+}
+.dis{
+background-color: white;
+padding-top: 0px;
+padding-bottom: 0px;
+}
