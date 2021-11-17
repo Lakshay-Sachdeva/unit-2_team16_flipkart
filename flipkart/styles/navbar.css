@@ -1,0 +1,25 @@
+#navbar{
+    display:flex;
+    justify-content:space-evenly ;
+    background-color:#2563EB;
+    padding: 1%;
+}
+#search-components{
+    display:flex ;
+    gap: 1%;
+}
+#search-components input{
+    width: 350px;
+    padding: 1%;
+}
+#user-info{
+    display:flex;
+    gap: 5%;
+    justify-content:space-evenly
+}
+#user-info div{
+    width: 100px ;
+    color: #ffffff ;
+    font-weight: 600;
+    font-size: 22px
+}
