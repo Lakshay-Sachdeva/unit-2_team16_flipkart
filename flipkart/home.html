@@ -7,10 +7,10 @@
     <title>Online Shopping Site for Mobile, Electronics, Furniture, Grocery, Lifestyle, Books $ More. Best Offers!</title>
     <link rel="icon" href="images-lakshay/flipkart-logo.png" type="image/x-icon" />
    <link rel="stylesheet" href="./styles/home.css">
+   <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body>
-    <header></header>
-    <script src = "header.js"></script>
+    <div id="navbar"></div>
     <main>
         <div id="navigation">
             <figure>
@@ -181,7 +181,15 @@
     </main>
     <footer></footer>
 
-    <script>
+    <script type="module">
+
+        import navbar from "./components/navbar.js" ;
+        let nav = document.getElementById("navbar") ;
+        nav.innerHTML = navbar() ;
+
+
+
+
         let cour = document.getElementById("courosel")          ///images-lakshay/courosel_1.jpg
         var i = 0 ;
         let slido = [ "images-lakshay/courosel_1.jpg" , "images-lakshay/courosel2.jpg" , "images-lakshay/courosel3.jpeg" , "images-lakshay/courosel4.jpeg" , "images-lakshay/courosel5.jpeg" , "images-lakshay/courosel6.jpeg"]
