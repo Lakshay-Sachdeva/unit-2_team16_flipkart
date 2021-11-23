@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/filter.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body id="body">
-    <header><center>
+    <!-- <header>
         <img class="image1" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="">
 
         <input type="text" placeholder="Search for products,brands and more">
         <button>Login</button>
         
         <a href="cart.html"> <button>cart </button></a>
-    </header></center>
-    <br>
+    </header>
+    <br> -->
+
+    <div id="navbar"></div>
+
+
    
   
    <br>
@@ -57,7 +62,13 @@
     
 </body>
 
-<script>
+<script type="module">
+
+        import navbar from "./components/navbar.js" ;
+        let nav = document.getElementById("navbar") ;
+        nav.innerHTML = navbar() ;
+
+
   
     var filte= JSON.parse(localStorage.getItem("filter"));
    
