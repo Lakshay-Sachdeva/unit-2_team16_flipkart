@@ -1,17 +1,18 @@
-* {
+body {
     margin: 0px;
     background-color: #e8eaec;
     font-family: Roboto, Arial, sans-serif;
+    margin-top: 60px;
 }
 
-#header {
+/* #header {
     height: 50px;
     color: whitesmoke;
     font-weight: 1000;
     font-size: 30px;
     background: #2874f0;
     padding: 10px 50px;
-}
+} */
 
 #main {
     display: grid;
@@ -145,7 +146,7 @@ footer{
 #f3 span{
     color:blue;
 }
-
+/* 
 header{
     display: grid;
     height: 80px;
@@ -171,4 +172,4 @@ header img {
     width: 100px;
     margin-top: 15%;
     
-}
+} */
