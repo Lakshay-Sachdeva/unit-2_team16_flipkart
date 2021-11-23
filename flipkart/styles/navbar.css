@@ -3,6 +3,11 @@
     justify-content:space-evenly ;
     background-color:#2563EB;
     padding: 1%;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 #search-components{
     display:flex ;
@@ -11,6 +16,13 @@
 #search-components input{
     width: 350px;
     padding: 1%;
+}
+#logo{
+    width: 100px ;
+    height: 30px;
+} 
+#logo img{
+    width: 100%;
 }
 #user-info{
     display:flex;
@@ -22,4 +34,8 @@
     color: #ffffff ;
     font-weight: 600;
     font-size: 22px
+}
+#search{
+    display:flex;
+    height: 30px;
 }
