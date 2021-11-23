@@ -1,4 +1,4 @@
-* {
+body {
     margin: 0px;
     background-color: #e8eaec;
     font-family: Roboto, Arial, sans-serif;
@@ -135,7 +135,7 @@ footer{
 #f3 span{
     color:blue;
 }
-header{
+/* header{
     display: grid;
     height: 80px;
     margin-bottom: -100px;
@@ -143,8 +143,8 @@ header{
     grid-template-rows:1fr;
     grid-template-areas: "h1 h2 h3";
     width: 100%;
-}
-#head_div_1{
+} */
+/* #head_div_1{
     grid-area: h1;
     background-color: #2874f0;
 }
@@ -160,4 +160,4 @@ header img {
     width: 100px;
     margin-top: 15%;
     
-}
+} */
