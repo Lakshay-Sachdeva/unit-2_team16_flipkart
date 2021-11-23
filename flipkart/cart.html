@@ -7,9 +7,10 @@
     <title>Shopping Cart | Flipkart.com</title>
     <link rel="icon" href="images-lakshay/flipkart-logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/style_cart.css" />
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 <body>
-    <div id="top">
+    <!-- <div id="top">
         <label>
             <a href=home.html><img src="images-lakshay/flipkart-head.jpg" id="logo"/></a>
                 <label class="flex">
@@ -20,13 +21,19 @@
         <a id="right" href="login.html"><button onclick=redirect()>Login</button></a>
 
 
-    </div >
+    </div > -->
+    <div id="navbar"></div>
     <div id="body">
         <div id ="pro_app"></div>
         <div id = "products"></div>
         <div id="p_o"></div>
     </div>
-    <script>
+    <script type="module">
+
+        import navbar from "./components/navbar.js" ;
+        let nav = document.getElementById("navbar") ;
+        nav.innerHTML = navbar() ;
+        
     //     let discount = [
     //         {masai30: 30} ,
     //         {masai20: 20} ,
