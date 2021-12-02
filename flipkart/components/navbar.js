@@ -1,7 +1,7 @@
 function navbar(){
     return `
     <div id="search-components">
-        <a href="home.html"><div id="logo">
+        <a href="index.html"><div id="logo">
             <img src="./images-lakshay/flipkart-head.jpg" />
         </div></a>
         <div id="search">
