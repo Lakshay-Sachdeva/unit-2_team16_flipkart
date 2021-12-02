@@ -48,7 +48,7 @@
         <div id="submain_div_4"><div class="div_head"> <span>3</span>Payment Options</div></div>
         <div id="submain_div_5">
             <div>
-                <img src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt=""><div>Safe and Secure Payments. Easy returns. 100% Authentic products.</div>
+                <!-- <img src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/shield_5f9216.png" alt=""><div>Safe and Secure Payments. Easy returns. 100% Authentic products.</div> -->
             </div>
         </div>
     </div>
@@ -66,16 +66,8 @@
         <div id="f2">© 2007-2021 Flipkart.com</div>
         <div id="f3" >Need help? Visit the <span>Help Center</span> or <span>Contact Us</span> </div>
     </footer>
-
-<script type="module">
-
-    import navbar from "./components/navbar.js" ;
-    let nav = document.getElementById("navbar") ;
-    nav.innerHTML = navbar() ;
-
-
-
-    function signup(){
+<script>
+     signup = function(){
            var name = document.getElementById('name').value;
            var email = document.getElementById('email').value;
            var pass = document.getElementById('pass').value;
@@ -88,12 +80,20 @@
                 
             
         }
-        function img(){
-            window.location.href = "home.html"
-        }
-
 </script>
 
 </body>
 
 </html>
+
+<script type="module">
+
+    import navbar from "./components/navbar.js" ;
+    let nav = document.getElementById("navbar") ;
+    nav.innerHTML = navbar() ;
+
+
+
+   
+
+</script>
