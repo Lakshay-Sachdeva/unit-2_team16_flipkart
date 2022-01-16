@@ -1,62 +1,71 @@
-# Flipkart clone
-# Flipkart clone  <a href="https://flipclone.netlify.app/" target="_blank"> Veiw Live</a>
-This is our first project at masai school construct week after learning HTML,CSS & JAVASCRIPT
+# **[Flipkart Front-End Project](https://flipclone.netlify.app/)** 
+---
 
-## Contributors
+---
+# Welcome
+---
 
-The main Contributors for this project are 
- - Jaswanth Gedam
- - Lakshay Sachdeva
- - Prajwal Rathod
- 
- ## Tech Stack
- - HTML
- - CSS
- - Java Script
+### About this project:
 
-## Description
+> This is a team project, built by us in the Construct Week - Unit 2 at Masai School.
 
-- ### Home page:-
-This is the main landing page of our website. 
-Here clicking on any option of the Navbar 
-will redirect the user to the respective 
-Product Page. 
-Clicking on Account will display an animated 
-popup box for login and sign up. 
-Clicking on Cart will  lead us to the Cart Page.
+---
 
-- ### Product Page:-
- This the product pages of our website. 
- On the right side all the products with 
- their respective name, 
- brand, price will be shown. 
+#### Project Demo: 
+- **[Checkout The Live Project Demo](https://drive.google.com/file/d/16veW4cjtII1T5REJL7-NwnWBbdeRb5un/view?usp=sharing)**
 
-  - ###  Cart Page:-
-  Here all the products added to the cart will be shown. At the bottom there is total price of the cart and the proceed to buy button. Clicking on the button will redirect the user to the Payment Page .
 
-  - ###  Address Page:-
-  This is the Address  page of our webside. 
-  Here the user has to fill in his name, 
-  shipping details etc. 
-  After the user fills those details 
-  Saved Address & Edit Address options will be shown in place of Enter Your Address. A Proceed to buy button will show up in Price Summary. Clicking on that will redirect the user to the Payment Page 2.
-  
-  - ### Payment Page:-
-   This is the Payment page where the 
-   user has to select a payment option. 
-   After the user has filled all the 
-   details and clicked on Pay Now button it will lead us to the success page.
-  
-   - ###  After Payment:-
-   After the payment has been done 
-   it will lead us to the Success page where payment 
-   successful message will be shown
-   ## Challenges:-
-   We had faced a lot of issues in cloning the website. First of all we were not used to reading the code of other people. I was working on the cart functionality which was in Landing page done by Aashish. There we faced some issues. We also sometimes had to fix some issues related to merging our code through github.
 
-   ## Learning:-
-   - We all became proficient in reading the code of team members.
-- Our code writing style became cleaner as we had to think while writing code that other team member will be reading.
-- We had to learn about many CSS properties that we didn’t know before.
-- Our skills in Java Script and DOM manipulation became better.
-- We all learned how to plan a project and execute that.
+### Our Team Members
+
+- **[Jaswanth Geddam](https://github.com/jash444)**
+- **[Lakshay Sachdeva](https://github.com/Lakshay-Sachdeva)**
+- **[Prajwal Rathod](https://github.com/prarathod)**
+
+---
+
+### Pages & Features
+
+- `Home Page`
+- `Sign-Up Page`
+- `Sign-In Page`
+- `Product Category Page`
+- `Single Products Page`
+- `Cart Page`
+- `Checkout Page`
+- `Payment Page`
+- `Order Successful Page`
+
+---
+
+### How To Use
+
+- As the user opens the landing page, they can see various product categories and trending deals following the category section, from where he can select the product category from the category bar or he can select the product from trending products section.
+- Users can see the products, and clicking on particular product, they will be redirected to product details page.
+- On products details page users can see the details and also the add to cart button.
+- If he clicks on cart then he will be redirected to cart page where he can see products which he has added to cart.
+- After adding all the products user can click on checkout.
+- Then they will proceed to checkout page, where user has to fill all the details for delivering the product, and if the user is not logged in, they will be first directed to login page, where they have option of login or register, in case of new user
+- After filling all the details including payment details then click on pay button. It will take some time for payment.
+- After payment has completed successfully then he will be redirected to landing page.
+
+---
+
+### Tech Stack Used 
+
+- `HTML`
+- `CSS`
+- `Javascript`
+
+
+---
+
+### Screenshots:
+
+
+#### Homepage
+
+![image](https://i.ibb.co/3WBqcC5/flipkart-homepage.png)
+
+
+---
